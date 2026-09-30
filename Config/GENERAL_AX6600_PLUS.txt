@@ -98,8 +98,7 @@ CONFIG_PACKAGE_p910nd=y
 CONFIG_PACKAGE_luci-app-p910nd=y
 
 # ===== 定制新增 =====
-# Tailscale（依赖 kmod-tun，已在 GENERAL_AX6600.txt 中启用）
-CONFIG_PACKAGE_luci-app-tailscale=y
+# Tailscale（仅官方 CLI 版：第三方 luci-app-tailscale 与官方包 init/config 文件冲突、UCI schema 也不兼容，故不集成）
 CONFIG_PACKAGE_tailscale=y
 # frpc（frp 客户端，对接 hwy 上的 frps；LuCI 面板来自官方 feed）
 CONFIG_PACKAGE_luci-app-frpc=y
