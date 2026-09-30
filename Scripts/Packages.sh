@@ -64,7 +64,7 @@ UPDATE_PACKAGE() {
 if [[ "${WRT_PROFILE^^}" == "PLUS" ]]; then
 	# LuCI 入口随 "pkg" 通配一并提取，依赖包（xray、sing-box、geodata 等）
 	# 由 passwall_packages feed 提供，避免同名包双重定义。
-	UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "master" "pkg"
+	#UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "master" "pkg"
 	#一代 PassWall 已由 PassWall2 取代，fork 者如需可取消注释，并同步启用 Config/GENERAL_AX6600_PLUS.txt 中对应配置段
 	#UPDATE_PACKAGE "passwall" "Openwrt-Passwall/openwrt-passwall" "main" "pkg"
 	UPDATE_PACKAGE "passwall2" "Openwrt-Passwall/openwrt-passwall2" "main" "pkg"
@@ -75,7 +75,7 @@ fi
 
 #UPDATE_PACKAGE "mosdns" "sbwml/luci-app-mosdns" "v5" "" "v2dat"
 
-#UPDATE_PACKAGE "luci-app-tailscale" "asvow/luci-app-tailscale" "main"
+UPDATE_PACKAGE "luci-app-tailscale" "asvow/luci-app-tailscale" "main"
 
 #UPDATE_PACKAGE "ddns-go" "sirpdboy/luci-app-ddns-go" "main"
 #UPDATE_PACKAGE "diskman" "lisaac/luci-app-diskman" "master"
